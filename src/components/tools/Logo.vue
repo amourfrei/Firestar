@@ -17,7 +17,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: '业务运营后台',
+      default: '京东城市贷款平台',
       required: false
     },
     showTitle: {

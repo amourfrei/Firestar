@@ -4,7 +4,7 @@
       <div class="top">
         <div class="header">
           <a href="/">
-            <span class="title">业务运营平台</span>
+            <img src="../assets/logo-d.png"/>
           </a>
         </div>
         <div class="desc">
