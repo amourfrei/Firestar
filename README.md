@@ -1,4 +1,4 @@
-# Drax
+# Firestar
 
 - Install dependencies
 ```
