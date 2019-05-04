@@ -4,17 +4,11 @@
       <div class="page-header-index-wide">
         <!-- <s-breadcrumb /> -->
         <div class="detail">
-          <div
-            class="main"
-            v-if="!$route.meta.hiddenHeaderContent"
-          >
+          <div class="main" v-if="!$route.meta.hiddenHeaderContent">
             <div class="row">
               <div class="j-logos">
-                <img src="../../assets/logo-d.png" />
-                <a-divider
-                  class="logo-divider"
-                  type="vertical"
-                />
+                <img src="../../assets/logo-d.png">
+                <a-divider class="logo-divider" type="vertical"/>
                 <p class="logo-title">京东城市贷款平台</p>
               </div>
               <div class="j-menus">
@@ -32,17 +26,14 @@
                 </router-link>
               </div>
 
-              <a-input-group
-                class="j-search"
-                compact
-              >
+              <a-input-group class="j-search" compact>
                 <!-- <a-select
                   size="large"
                   defaultValue="企业"
                 >
                   <a-select-option value="Sign Up">企业</a-select-option>
                   <a-select-option value="Sign In">个人</a-select-option>
-                </a-select> -->
+                </a-select>-->
                 <a-input-search
                   placeholder="请输入搜索关键字"
                   style="width: 170px; float:right;"
@@ -55,10 +46,7 @@
       </div>
     </div>
 
-    <div
-      class="login-cont-outer"
-      v-if="$route.meta.showLoginCont"
-    >
+    <div class="login-cont-outer" v-if="$route.meta.showLoginCont">
       <div class="login-cont">
         <div class="login-inner">
           <a-card
@@ -84,11 +72,7 @@
         ]"
                     placeholder="邮箱/用户名/已验证手机号"
                   >
-                    <a-icon
-                      slot="prefix"
-                      type="user"
-                      style="color: rgba(0,0,0,.25)"
-                    />
+                    <a-icon slot="prefix" type="user" style="color: rgba(0,0,0,.25)"/>
                   </a-input>
                 </a-form-item>
                 <a-form-item>
@@ -101,44 +85,31 @@
                     type="password"
                     placeholder="登录密码"
                   >
-                    <a-icon
-                      slot="prefix"
-                      type="lock"
-                      style="color: rgba(0,0,0,.25)"
-                    />
+                    <a-icon slot="prefix" type="lock" style="color: rgba(0,0,0,.25)"/>
                   </a-input>
                 </a-form-item>
                 <a-form-item>
-                  <a-checkbox v-decorator="[
+                  <a-checkbox
+                    v-decorator="[
           'remember',
           {
             valuePropName: 'checked',
             initialValue: true,
           }
-        ]">
-                    记住我
-                  </a-checkbox>
-                  <a
-                    class="login-form-forgot"
-                    href=""
-                  >
-                    忘记密码?
-                  </a>
+        ]"
+                  >记住我</a-checkbox>
+                  <a class="login-form-forgot" href>忘记密码?</a>
                   <a-button
                     type="primary"
                     html-type="submit"
                     class="login-form-button"
                     size="large"
-                  >
-                    登录
-                  </a-button>
+                  >登录</a-button>
                   <a
                     style="position:relative; top: 30px;float: right;"
                     href="#"
                     @click="showModal"
-                  >
-                    注册
-                  </a>
+                  >注册</a>
                 </a-form-item>
               </a-form>
             </div>
@@ -148,42 +119,20 @@
       </div>
     </div>
 
-    <div
-      class="search-list-outer"
-      v-if="$route.meta.showSearchList"
-    >
+    <div class="search-list-outer" v-if="$route.meta.showSearchList">
       <div class="search-header-list">
-        <a-row
-          type="flex"
-          justify="space-between"
-          :gutter="48"
-          align="middle"
-        >
-          <a-col
-            :md="6"
-            :sm="24"
-          >
-            <a-input-group
-              style="margin-top: -12px;display:flex;"
-              class="j-search"
-              compact
-            >
+        <a-row type="flex" justify="space-between" :gutter="48" align="middle">
+          <a-col :md="6" :sm="24">
+            <a-input-group style="margin-top: -12px;display:flex;" class="j-search" compact>
               <a-select defaultValue="企业">
                 <a-select-option value="Sign Up">企业</a-select-option>
                 <a-select-option value="Sign In">个人</a-select-option>
               </a-select>
-              <a-input-search
-                placeholder="请输入搜索关键字"
-                style="width: 170px"
-              />
+              <a-input-search placeholder="请输入搜索关键字" style="width: 170px"/>
             </a-input-group>
-
           </a-col>
 
-          <a-col
-            :md="18"
-            :sm="24"
-          >
+          <a-col :md="18" :sm="24">
             <ul>
               <li>首字母筛选</li>
               <li>A</li>
@@ -218,86 +167,51 @@
       </div>
     </div>
 
-    <a-modal
-      v-model="visible"
-      title="企业新用户注册"
-      onOk="handleOk"
-      :width="380"
-    >
-
-                                <template slot="footer">
-                  <div class="go-login-cont">
-                    已有账号？<a class="" @click="handleOk">立即登录</a>  
-                  </div>
+    <a-modal v-model="visible" title="企业新用户注册" onOk="handleOk" :width="380">
+      <template slot="footer">
+        <div class="go-login-cont">
+          已有账号？
+          <a class @click="handleOk">立即登录</a>
+        </div>
       </template>
 
       <div class="table-page-search-wrapper">
-
         <a-form
-                id="components-form-demo-normal-login"
-                :form="form"
-                class="login-form"
-                style="padding-bottom:30px;"
-                @submit="handleSubmit"
-                layout="inline"
-              >
-                <a-form-item label="企业名称">
-                  <a-input
-                    size="large"
-                    placeholder="企业名称"
-                  >
-                  </a-input>
-                </a-form-item>
-                                <a-form-item label="手机号">
-                  <a-input
-                    size="large"
-                    placeholder="手机号"
-                  >
-                  </a-input>
-                </a-form-item>
-                <a-form-item label="登录密码">
-                  <a-input
-                    size="large"
-                    type="password"
-                    placeholder="登录密码"
-                  >
-                  </a-input>
-                </a-form-item>
+          id="components-form-demo-normal-login"
+          :form="form"
+          class="login-form"
+          style="padding-bottom:30px;"
+          @submit="handleSubmit"
+          layout="inline"
+        >
+          <a-form-item label="企业名称">
+            <a-input size="large" placeholder="企业名称"></a-input>
+          </a-form-item>
+          <a-form-item label="手机号">
+            <a-input size="large" placeholder="手机号"></a-input>
+          </a-form-item>
+          <a-form-item label="登录密码">
+            <a-input size="large" type="password" placeholder="登录密码"></a-input>
+          </a-form-item>
 
-                <a-form-item label="验证码">
-                  <a-input
-                    size="large"
-                    type="password"
-                    placeholder="登录密码"
-                    style="width: 137px;"
-                  >
-                  </a-input>
-                  <a-button style="margin-left: 15px;display: inline-block;width: 100px;text-align: center;padding: 0;" size="large" type="primary" disabled>获取验证码</a-button>
-                </a-form-item>
-           
-                <a-form-item>
-                  <a-checkbox>
-                    我已经阅读同意
-                  </a-checkbox>
-                  <a
-                    href=""
-                  >
-                  《服务条款》
-                  </a>
-                  <a-button
-                    type="primary"
-                    html-type="submit"
-                    class="login-form-button"
-                    size="large"
-                  >
-                    确认
-                  </a-button>
+          <a-form-item label="验证码">
+            <a-input size="large" type="password" placeholder="登录密码" style="width: 137px;"></a-input>
+            <a-button
+              style="margin-left: 15px;display: inline-block;width: 100px;text-align: center;padding: 0;"
+              size="large"
+              type="primary"
+              disabled
+            >获取验证码</a-button>
+          </a-form-item>
 
-                </a-form-item>
-              </a-form>
+          <a-form-item>
+            <a-checkbox>我已经阅读同意</a-checkbox>
+            <a href>《服务条款》</a>
+            <a-button type="primary" html-type="submit" class="login-form-button" size="large">确认</a-button>
+          </a-form-item>
+        </a-form>
       </div>
     </a-modal>
-
   </div>
 </template>
 
@@ -326,7 +240,7 @@ export default {
       required: false
     }
   },
-  data() {
+  data () {
     return {
       dataSource: [],
       loading: false,
@@ -358,32 +272,33 @@ export default {
         }
       ],
       key: 'tab1',
-      noTitleKey: 'personal'
+      noTitleKey: 'personal',
+      form: ""
     }
   },
   methods: {
-    handleChange(value) {
+    handleChange (value) {
       this.dataSource =
         !value || value.indexOf('@') >= 0 ? [] : [`${value}@gmail.com`, `${value}@163.com`, `${value}@qq.com`]
     },
-    onTabChange(key, type) {
+    onTabChange (key, type) {
       console.log(key, type)
       this[type] = key
     },
-    handleSubmit(e) {
+    handleSubmit (e) {
       e.preventDefault()
     },
-    showModal() {
+    showModal () {
       this.visible = true
     },
-    handleOk(e) {
+    handleOk (e) {
       this.loading = true
       setTimeout(() => {
         this.visible = false
         this.loading = false
       }, 3000)
     },
-    handleCancel(e) {
+    handleCancel (e) {
       this.visible = false
     }
   }
@@ -614,13 +529,13 @@ export default {
   position: relative;
   top: 20px;
 }
-/deep/.ant-form-inline .ant-form-item > .ant-form-item-label{
-  width: 80px!important;
+/deep/.ant-form-inline .ant-form-item > .ant-form-item-label {
+  width: 80px !important;
 }
-/deep/.ant-modal-body{
+/deep/.ant-modal-body {
   padding-bottom: 60px;
 }
-.go-login-cont{
+.go-login-cont {
   width: 100%;
   text-align: center;
 }

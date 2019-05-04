@@ -10,7 +10,7 @@ export const asyncRouterMap = [
     meta: { title: '首页' },
     redirect: '/home',
     children: [
-      //贷款审批
+      // 贷款审批
       {
         path: '/home',
         redirect: '/home',
@@ -64,6 +64,24 @@ export const asyncRouterMap = [
             name: 'collect',
             component: () => import('@/views/collect'),
             meta: { title: '综合排序', showSearchList: true, keepAlive: true }
+          },
+          {
+            path: '/apply',
+            name: 'apply',
+            component: () => import('@/views/apply'),
+            meta: { title: '', keepAlive: true }
+          },
+          {
+            path: '/myaccount',
+            name: 'myaccount',
+            component: () => import('@/views/myaccount'),
+            meta: { title: '', keepAlive: true }
+          },
+          {
+            path: '/applicationForm',
+            name: 'applicationForm',
+            component: () => import('@/views/applicationForm'),
+            meta: { title: '', keepAlive: true }
           }
         ]
       }

@@ -11,6 +11,8 @@ import Radar from '@/components/Charts/Radar'
 import RankList from '@/components/Charts/RankList'
 import TransferBar from '@/components/Charts/TransferBar'
 import TagCloud from '@/components/Charts/TagCloud'
+import HomeBar from '@/components/Charts/HomeBar'
+import HomePie from '@/components/Charts/HomePie'
 
 // pro components
 import AvatarList from '@/components/AvatarList'
@@ -29,6 +31,7 @@ import TagSelect from '@/components/TagSelect'
 import ExceptionPage from '@/components/Exception'
 import StandardFormRow from '@/components/StandardFormRow'
 import ArticleListContent from '@/components/ArticleListContent'
+import ProItem from '@/components/ProItem'
 
 export {
   AvatarList,
@@ -60,5 +63,8 @@ export {
   IconSelector,
   TagSelect,
   StandardFormRow,
-  ArticleListContent
+  ArticleListContent,
+  HomeBar,
+  HomePie,
+  ProItem
 }
