@@ -78,7 +78,7 @@ export const asyncRouterMap = [
             meta: { title: '', keepAlive: true }
           },
           {
-            path: '/applicationForm',
+            path: '/account',
             name: 'applicationForm',
             component: () => import('@/views/applicationForm'),
             meta: { title: '', keepAlive: true }

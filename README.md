@@ -10,3 +10,8 @@ npm install
 npm run serve
 
 ```
+
+function handleCustomException(){
+  Raven.captureException(err);
+  Raven.showReportDialog();
+}

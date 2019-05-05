@@ -16,12 +16,12 @@
                   <a class="j-menu-title">首页</a>
                 </router-link>
                 <router-link to="/collect">
-                  <a class="j-menu-title">金融平台</a>
-                </router-link>
-                <router-link to="/step-one">
                   <a class="j-menu-title">申请贷款</a>
                 </router-link>
                 <router-link to="/home">
+                  <a class="j-menu-title">老赖公示</a>
+                </router-link>
+                <router-link to="/account">
                   <a class="j-menu-title">我的账户</a>
                 </router-link>
               </div>

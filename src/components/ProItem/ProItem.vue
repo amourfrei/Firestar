@@ -18,8 +18,12 @@
         <p class="pro-concrete">{{item.termTime}}</p>
       </div>
       <div class="item-r">
-        <a-button type="primary" class="pro-btn">平台详情</a-button>
-        <a-button type="danger" class="pro-btn">申请贷款</a-button>
+        <router-link to="/stas">
+          <a-button type="primary" class="pro-btn">平台详情</a-button>
+        </router-link>
+        <router-link to="/apply">
+          <a-button type="danger" class="pro-btn">申请贷款</a-button>
+        </router-link>
       </div>
     </div>
   </div>

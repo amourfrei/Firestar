@@ -58,7 +58,9 @@
                           <a-table-column title="操作" key="action" align="center">
                             <template slot-scope="text, record">
                               <div class="btns" v-if="text.statusCode==='1'">
+                                <router-link to="/myaccount">
                                 <a-button type="primary" size="small">查看详情</a-button>
+                                </router-link>
                                 <br>
                                 <a-button type="primary" size="small" class="btn2">还款</a-button>
                               </div>
